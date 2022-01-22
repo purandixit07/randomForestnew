@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Value of House Price</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="crim" id="crim" placeholder="CRIM" step="any">
+            <input type="number" name="zn" id="zn" placeholder="ZN" step="any">
+            <input type="number" name="indus" id="indus" placeholder="INDUS" step="any">
+            <input type="number" name="chas" id="chas" placeholder="CHAS" step="any">
+            <input type="number" name="nox" id="nox" placeholder="NOX" step="any">
+            <input type="number" name="rm" id="rm" placeholder="RM" step="any">
+            <input type="number" name="age" id="age" placeholder="AGE" step="any">
+            <input type="number" name="dis" id="dis" placeholder="DIS" step="any">
+            <input type="number" name="tax" id="tax" placeholder="TAX" step="any">
+            <input type="number" name="pt_ratio" id="pt_ratio" placeholder="PTRATIO" step="any">
+            <input type="number" name="b" id="b" placeholder="B" step="any">
+            <input type="number" name="l_stat" id="l_stat" placeholder="LSTAT" step="any">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
